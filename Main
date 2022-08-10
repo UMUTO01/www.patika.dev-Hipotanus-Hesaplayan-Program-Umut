@@ -1,0 +1,30 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.print("İlk dik kenarın uzunlugunu yazınız");
+        Scanner scan = new Scanner(System.in);
+        double a = scan.nextDouble();
+        System.out.print("İkinci dik kenarın uzunlugunu yazınız:");
+        double b = scan.nextDouble();
+        System.out.print("Hipotanusun kenar uzunlugunu yazınız:");
+        double c = scan.nextDouble();
+        System.out.print((TriangleCalculator(a,b,c)));
+
+	// write your code here
+    }
+    public static double TriangleCalculator(double firstSide, double SecondSide, double Hipotanus){
+
+        double newSides = (firstSide + SecondSide + Hipotanus)/2;
+        double SquareRootArea = newSides*((newSides- firstSide)*(newSides- SecondSide)*(newSides-Hipotanus));
+        double NewSquareRootArea = Math.sqrt(SquareRootArea);
+        return NewSquareRootArea;
+    }
+    public static double TriangleCal(double Firstside, double Secondside){
+        double Hipotanus = (Firstside*Firstside) + (Secondside*Secondside);
+        return Hipotanus;
+    }
+}
